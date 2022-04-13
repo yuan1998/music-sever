@@ -19,5 +19,33 @@ class ConsumerController extends Controller
         return response()->json($user);
     }
 
+    public function signUp(Request $request)
+    {
+        $data = $request->all();
+        $username = $data['username'];
+
+        $exists = Consumer::query()
+            ->where('username', $username)
+            ->exists();
+
+        if ($exists)
+            return response()->json([
+                'code' => 1,
+                'msg' => '注册失败,用户名已被注册',
+                'type' => 'error',
+            ]);
+
+        $data['password'] = bcrypt($data['password']);
+        Consumer::create($data);
+
+        return response()->json([
+            'code' => 1,
+            'msg' => '注册成功',
+            'type' => 'success',
+            'success' => 1,
+        ]);
+
+    }
+
 
 }

@@ -8,8 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Collect extends Model
 {
-	use HasDateTimeFormatter;
+    use HasDateTimeFormatter;
+
     protected $table = 'collect';
-    public $timestamps = false;
+
+    const CREATED_AT = 'create_time';
+    const UPDATED_AT = null;
+
+    protected $fillable = [
+        "user_id",
+        "type",
+        "song_id",
+        "song_list_id",
+    ];
+
 
 }

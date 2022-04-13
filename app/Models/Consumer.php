@@ -34,8 +34,13 @@ class Consumer extends Authentication implements JWTSubject
         'birth',
         'introduction',
         'avator',
+        'interest',
         'create_time',
         'update_time',
+    ];
+
+    protected $casts = [
+        'interest' => 'json'
     ];
 
 

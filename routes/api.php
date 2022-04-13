@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\CollectionController;
 use App\Http\Controllers\Api\CommentController;
 use App\Http\Controllers\Api\ConsumerController;
 use App\Http\Controllers\Api\RankListController;
@@ -38,8 +39,9 @@ Route::group([
 
 Route::group([
     'prefix' => 'user'
-],function () {
-    Route::get('/detail',[ConsumerController::class , 'detail']);
+], function () {
+    Route::get('/detail', [ConsumerController::class, 'detail']);
+    Route::post('/add', [ConsumerController::class, 'signUp']);
 });
 
 Route::group([
@@ -50,6 +52,13 @@ Route::group([
     Route::get('/singerName/detail', [SongController::class, 'searchSong']);
 
 });
+
+Route::group([
+    'prefix' => 'collection'
+], function () {
+    Route::post('/add', [CollectionController::class, 'store']);
+});
+
 
 Route::group([
     'prefix' => 'comment'
