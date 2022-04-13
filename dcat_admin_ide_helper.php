@@ -36,6 +36,9 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection avatar
      * @property Grid\Column|Collection remember_token
      * @property Grid\Column|Collection username
+     * @property Grid\Column|Collection comment
+     * @property Grid\Column|Collection path
+     * @property Grid\Column|Collection url
      * @property Grid\Column|Collection create_time
      * @property Grid\Column|Collection song_id
      * @property Grid\Column|Collection song_list_id
@@ -44,6 +47,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection avator
      * @property Grid\Column|Collection birth
      * @property Grid\Column|Collection email
+     * @property Grid\Column|Collection interest
      * @property Grid\Column|Collection introduction
      * @property Grid\Column|Collection location
      * @property Grid\Column|Collection phone_num
@@ -66,7 +70,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection pic
      * @property Grid\Column|Collection lyric
      * @property Grid\Column|Collection singer_id
-     * @property Grid\Column|Collection url
+     * @property Grid\Column|Collection create_by
+     * @property Grid\Column|Collection create_date
      * @property Grid\Column|Collection style
      * @property Grid\Column|Collection email_verified_at
      *
@@ -95,6 +100,9 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection avatar(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
      * @method Grid\Column|Collection username(string $label = null)
+     * @method Grid\Column|Collection comment(string $label = null)
+     * @method Grid\Column|Collection path(string $label = null)
+     * @method Grid\Column|Collection url(string $label = null)
      * @method Grid\Column|Collection create_time(string $label = null)
      * @method Grid\Column|Collection song_id(string $label = null)
      * @method Grid\Column|Collection song_list_id(string $label = null)
@@ -103,6 +111,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection avator(string $label = null)
      * @method Grid\Column|Collection birth(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
+     * @method Grid\Column|Collection interest(string $label = null)
      * @method Grid\Column|Collection introduction(string $label = null)
      * @method Grid\Column|Collection location(string $label = null)
      * @method Grid\Column|Collection phone_num(string $label = null)
@@ -125,7 +134,8 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection pic(string $label = null)
      * @method Grid\Column|Collection lyric(string $label = null)
      * @method Grid\Column|Collection singer_id(string $label = null)
-     * @method Grid\Column|Collection url(string $label = null)
+     * @method Grid\Column|Collection create_by(string $label = null)
+     * @method Grid\Column|Collection create_date(string $label = null)
      * @method Grid\Column|Collection style(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
      */
@@ -159,6 +169,9 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection avatar
      * @property Show\Field|Collection remember_token
      * @property Show\Field|Collection username
+     * @property Show\Field|Collection comment
+     * @property Show\Field|Collection path
+     * @property Show\Field|Collection url
      * @property Show\Field|Collection create_time
      * @property Show\Field|Collection song_id
      * @property Show\Field|Collection song_list_id
@@ -167,6 +180,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection avator
      * @property Show\Field|Collection birth
      * @property Show\Field|Collection email
+     * @property Show\Field|Collection interest
      * @property Show\Field|Collection introduction
      * @property Show\Field|Collection location
      * @property Show\Field|Collection phone_num
@@ -189,7 +203,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection pic
      * @property Show\Field|Collection lyric
      * @property Show\Field|Collection singer_id
-     * @property Show\Field|Collection url
+     * @property Show\Field|Collection create_by
+     * @property Show\Field|Collection create_date
      * @property Show\Field|Collection style
      * @property Show\Field|Collection email_verified_at
      *
@@ -218,6 +233,9 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection avatar(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
      * @method Show\Field|Collection username(string $label = null)
+     * @method Show\Field|Collection comment(string $label = null)
+     * @method Show\Field|Collection path(string $label = null)
+     * @method Show\Field|Collection url(string $label = null)
      * @method Show\Field|Collection create_time(string $label = null)
      * @method Show\Field|Collection song_id(string $label = null)
      * @method Show\Field|Collection song_list_id(string $label = null)
@@ -226,6 +244,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection avator(string $label = null)
      * @method Show\Field|Collection birth(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
+     * @method Show\Field|Collection interest(string $label = null)
      * @method Show\Field|Collection introduction(string $label = null)
      * @method Show\Field|Collection location(string $label = null)
      * @method Show\Field|Collection phone_num(string $label = null)
@@ -248,7 +267,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection pic(string $label = null)
      * @method Show\Field|Collection lyric(string $label = null)
      * @method Show\Field|Collection singer_id(string $label = null)
-     * @method Show\Field|Collection url(string $label = null)
+     * @method Show\Field|Collection create_by(string $label = null)
+     * @method Show\Field|Collection create_date(string $label = null)
      * @method Show\Field|Collection style(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
      */

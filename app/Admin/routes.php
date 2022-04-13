@@ -18,4 +18,5 @@ Route::group([
     $router->resource('/song_list',"SongListController");
     $router->resource('/consumer',"ConsumerController");
     $router->resource('/comment',"CommentController");
+    $router->resource('/banner',"BannerController");
 });

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\BannerController;
 use App\Http\Controllers\Api\CollectionController;
 use App\Http\Controllers\Api\CommentController;
 use App\Http\Controllers\Api\ConsumerController;
@@ -27,9 +28,15 @@ Route::get('/test', function () {
 });
 
 Route::group([
-    'middleware' => 'api',
+    'prefix' => 'banner'
+], function () {
+    Route::get('/', [BannerController::class, 'index']);
+});
+
+Route::group([
     'prefix' => 'auth'
 ], function ($router) {
+
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/register', [AuthController::class, 'register']);
     Route::delete('/logout', [AuthController::class, 'logout']);
@@ -41,6 +48,8 @@ Route::group([
     'prefix' => 'user'
 ], function () {
     Route::get('/detail', [ConsumerController::class, 'detail']);
+    Route::post('/update' , [ConsumerController::class , 'update']);
+    Route::post('/interest' , [ConsumerController::class , 'interest']);
     Route::post('/add', [ConsumerController::class, 'signUp']);
 });
 

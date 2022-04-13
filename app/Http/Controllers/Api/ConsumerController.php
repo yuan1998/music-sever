@@ -8,6 +8,23 @@ use Illuminate\Http\Request;
 
 class ConsumerController extends Controller
 {
+
+    public function update(Request $request)
+    {
+        $data = $request->all();
+        $id = $request->get('id');
+        if (isset($data['password']))
+            $data['password'] = bcrypt($data['password']);
+
+        Consumer::query()
+            ->where('id', $id)
+            ->update($data);
+        return response()->json([
+            'code' => 1,
+        ]);
+    }
+
+
     public function detail(Request $request): \Illuminate\Http\JsonResponse
     {
         $id = $request->get('id');
@@ -17,6 +34,22 @@ class ConsumerController extends Controller
             ->first();
 
         return response()->json($user);
+    }
+
+    public function interest(Request $request)
+    {
+        $id = $request->get('id');
+        $interest = $request->get('interest');
+        $model = Consumer::query()
+            ->where('id', $id)
+            ->update([
+                'interest' => $interest
+            ]);
+
+        return response()->json([
+            'code' => 1,
+            'data' => $model,
+        ]);
     }
 
     public function signUp(Request $request)

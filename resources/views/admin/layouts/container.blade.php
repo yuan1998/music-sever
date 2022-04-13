@@ -24,7 +24,7 @@
     <p class="clearfix blue-grey lighten-2 mb-0 text-center">
             <span class="text-center d-block d-md-inline-block mt-25">
                 Powered by
-                <a target="_blank" href="https://gitee.com/yuan1998/target_plan">Yuan 1998</a>
+                <a target="_blank" href="https://github.com/yuan1998/music-sever">Yuan 1998</a>
                 <span>&nbsp;·&nbsp;</span>
                 v{{ env('VERSION' ,'1.0.0' ) }}
             </span>
