@@ -26,6 +26,7 @@ class SongController extends AdminController
 //            $grid->column('singer_id');
             $grid->column('name');
             $grid->column('introduction');
+            $grid->column('type');
             $grid->column('create_time');
             $grid->column('update_time');
             $grid->column('lyric')

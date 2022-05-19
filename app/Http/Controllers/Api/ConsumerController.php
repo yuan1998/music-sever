@@ -9,6 +9,28 @@ use Illuminate\Http\Request;
 class ConsumerController extends Controller
 {
 
+    public function search(Request $request)
+    {
+        $q = $request->get('q');
+        $query = Consumer::query()
+            ->select([
+                'username',
+                'id',
+            ]);
+
+        if ($q)
+            $query->where('username', 'like', "%$q%");
+
+        $list = $query->get();
+
+
+        return response()->json([
+            'code' => 1,
+            'data' => $list,
+        ]);
+
+    }
+
     public function update(Request $request)
     {
         $data = $request->all();

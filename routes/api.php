@@ -47,6 +47,7 @@ Route::group([
 Route::group([
     'prefix' => 'user'
 ], function () {
+    Route::get('/search', [ConsumerController::class, 'search']);
     Route::get('/detail', [ConsumerController::class, 'detail']);
     Route::post('/update' , [ConsumerController::class , 'update']);
     Route::post('/interest' , [ConsumerController::class , 'interest']);

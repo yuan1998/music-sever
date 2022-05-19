@@ -16,12 +16,12 @@ class NewUsers extends Line
     {
         parent::init();
 
-        $this->title('New Users');
+        $this->title('新用户');
         $this->dropdown([
-            '7' => 'Last 7 Days',
-            '28' => 'Last 28 Days',
-            '30' => 'Last Month',
-            '365' => 'Last Year',
+            '7' => '近 7 天',
+            '28' => '近 28 天',
+            '30' => '近一个月',
+            '365' => '近一年',
         ]);
     }
 
